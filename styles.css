@@ -198,6 +198,20 @@ p.description {
   letter-spacing: 0.02em;
   padding-bottom: 30px;
   line-height: 1.7;
+  border-top: 1px solid rgba(81, 130, 200, 0.2);
+  padding-top: 20px;
+}
+
+.footer-link {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(81, 130, 200, 0.5);
+  transition: all 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--link-hover);
+  border-bottom-color: var(--link-hover);
 }
 
 .star {
@@ -231,17 +245,7 @@ p.description {
   }
 }
 
-.footer-link {
-  color: var(--link-color);
-  text-decoration: none;
-  border-bottom: 1px dotted rgba(81, 130, 200, 0.5);
-  transition: all 0.2s;
-}
 
-.footer-link:hover {
-  color: var(--link-hover);
-  border-bottom-color: var(--link-hover);
-}
 
 .theme-switch-wrapper {
   position: fixed;
@@ -283,4 +287,91 @@ p.description {
 
 .theme-switch button:hover {
   opacity: 1;
+}
+
+/* Easter Egg Styles */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  animation: confetti-fall 4s ease-in-out forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.easter-egg-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--card-bg);
+  color: var(--text-color-dark);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  animation: bounce-in 0.5s ease-out;
+  transition: opacity 1s ease;
+}
+
+.easter-egg-message .small {
+  font-size: 1rem;
+  color: var(--text-color-light);
+  display: block;
+  margin-top: 8px;
+}
+
+.easter-egg-message.fade-out {
+  opacity: 0;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.hidden-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 20px;
+  opacity: 0.15;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+  user-select: none;
+}
+
+.hidden-icon:hover {
+  opacity: 0.5;
+  transform: rotate(15deg);
+}
+
+.hidden-icon:active {
+  transform: scale(1.2) rotate(15deg);
 }
