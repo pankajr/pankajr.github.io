@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Set the last updated date
   const lastUpdatedElement = document.getElementById('last-updated');
   // The date is hardcoded in the HTML, but you can update it manually when needed
-  
+
   // Get visitor's IP and location information
   fetchVisitorInfo();
 });
@@ -14,13 +14,13 @@ async function fetchVisitorInfo() {
     // Use ipinfo.io to get IP and location data
     const response = await fetch('https://ipinfo.io/json');
     const data = await response.json();
-    
+
     // Extract relevant information
     const ip = data.ip || 'Unknown';
     const city = data.city || '';
     const region = data.region || '';
     const country = data.country || '';
-    
+
     // Format the location string
     let locationString = '';
     if (city && region) {
@@ -30,11 +30,11 @@ async function fetchVisitorInfo() {
     } else if (region) {
       locationString = region;
     }
-    
+
     if (country) {
       locationString += locationString ? `, ${country}` : country;
     }
-    
+
     // Update the visitor location element
     const visitorLocationElement = document.getElementById('visitor-location');
     visitorLocationElement.textContent = `You're visiting from: ${locationString} (${ip})`;

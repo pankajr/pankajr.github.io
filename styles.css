@@ -276,22 +276,22 @@ p.description {
     gap: 20px;
     align-items: center;
   }
-  
+
   .category {
     margin: 0 auto 25px auto;
     width: 100%;
     max-width: 500px;
     min-width: 0;
   }
-  
+
   body {
     padding: 30px 15px;
   }
-  
+
   h1 {
     font-size: 1.9rem;
   }
-  
+
   .theme-switch-wrapper {
     top: 15px;
     right: 15px;
@@ -302,11 +302,11 @@ p.description {
   .category {
     padding: 25px 20px 18px 20px;
   }
-  
+
   .link-card {
     padding: 15px 0 12px 0;
   }
-  
+
   body {
     padding: 25px 12px;
   }
@@ -381,7 +381,7 @@ p.description {
     width: 40px;
     height: 40px;
   }
-  
+
   .back-to-top svg {
     width: 18px;
     height: 18px;
