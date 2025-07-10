@@ -249,6 +249,20 @@ p.description {
   margin-right: auto;
 }
 
+.visitor-info {
+  margin-top: 20px;
+  font-size: 0.85em;
+  color: var(--text-color-lighter);
+  opacity: 0.8;
+  border-top: 1px dashed rgba(81, 130, 200, 0.15);
+  padding-top: 15px;
+  line-height: 1.5;
+}
+
+#last-updated, #visitor-location {
+  margin: 3px 0;
+}
+
 @media (max-width: 1100px) {
   .category {
     width: calc(50% - 30px);
@@ -298,7 +312,81 @@ p.description {
   }
 }
 
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background-color: var(--card-bg);
+  color: var(--link-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  border: 1px solid var(--border-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 100;
+  cursor: pointer;
+  transform: translateY(20px) scale(0.9);
+}
 
+.back-to-top.visible {
+  opacity: 0.9;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top:hover {
+  opacity: 1;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px var(--card-shadow-hover);
+  color: var(--link-hover);
+}
+
+.back-to-top:active {
+  transform: translateY(0) scale(0.95);
+  transition: all 0.1s ease;
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode specific back-to-top styling */
+:root.dark .back-to-top {
+  background-color: rgba(34, 40, 54, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Light mode specific back-to-top styling */
+:root.light .back-to-top {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Make sure the button doesn't overlap with other elements on mobile */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .back-to-top svg {
+    width: 18px;
+    height: 18px;
+  }
+}
 
 .theme-switch-wrapper {
   position: fixed;
@@ -432,14 +520,34 @@ p.description {
 .logo-wrapper {
   text-align: center;
   margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 auto 10px;
+}
+
+/* Add a subtle background in light mode for better contrast */
+:root.light .logo-wrapper {
+  background-color: rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .site-logo {
   height: 40px;
   width: auto;
-  opacity: 0.75;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.08));
+  opacity: 0.85;
   transition: all 0.3s ease;
+}
+
+/* Add contrast in light mode */
+:root.light .site-logo {
+  filter: brightness(0.7) contrast(1.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Maintain visibility in dark mode */
+:root.dark .site-logo {
+  filter: brightness(1.1) drop-shadow(0 1px 3px rgba(255, 255, 255, 0.1));
 }
 
 .site-logo:hover {

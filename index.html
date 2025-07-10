@@ -45,8 +45,10 @@
         <button id="darkBtn" class="theme-btn" aria-label="Dark mode">Dark</button>
       </div>
     </div>
-    <div class="logo-wrapper">
-      <img src="img/PR-logo.png" alt="Pankaj's Recommendations" class="site-logo">
+    <div style="text-align: center;">
+      <div class="logo-wrapper">
+        <img src="img/PR-logo.png" alt="Pankaj's Recommendations" class="site-logo">
+      </div>
     </div>
     <h1>Hey, I'm Pankaj <span class="wave">👋</span></h1>
     <p class="description">
@@ -146,9 +148,21 @@
       enough for half a latte in this economy<br>
       © 2025 • Hosted on <a href="https://pages.cloudflare.com/" target="_blank" class="footer-link">Cloudflare Pages</a>
       because it sounded cool
+      <div class="visitor-info">
+        <div id="last-updated">Last updated: July 10, 2025</div>
+        <div id="visitor-location">Loading your location...</div>
+      </div>
     </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+      </svg>
+    </button>
 
     <script src="theme.js"></script>
     <script src="easter.js"></script>
+    <script src="visitor-info.js"></script>
+    <script src="back-to-top.js"></script>
   </body>
 </html>
