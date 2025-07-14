@@ -179,6 +179,21 @@ p.description {
   padding: 0 5px;
 }
 
+.link-desc .highlight {
+  font-weight: 500;
+  color: var(--link-color);
+  opacity: 0.9;
+}
+
+/* Visual style for coffee brewing method keywords */
+.coffee-method {
+  display: inline-block;
+  margin-right: 4px;
+  font-weight: 500;
+  font-style: italic;
+  border-bottom: 1px dotted var(--link-color);
+}
+
 .wave {
   display: inline-block;
   animation: wave-animation 2.5s ease-in-out infinite;
