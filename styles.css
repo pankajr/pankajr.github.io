@@ -254,11 +254,14 @@ h1 em {
 
 .index-no {
   display: block;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 1;
   color: var(--accent);
-  margin-bottom: 0.75rem;
+  opacity: 0.22;
+  margin-bottom: 0.4rem;
 }
 
 .category h2 {
@@ -291,10 +294,10 @@ h1 em {
 }
 
 .links a {
-  display: flex;
+  display: grid;
+  grid-template-columns: 3.4rem 1fr auto;
+  column-gap: 0.9rem;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
   padding: 0.95rem 0.85rem;
   margin: 0 -0.85rem;
   border-radius: 10px;
@@ -307,25 +310,21 @@ h1 em {
   background: var(--hover-tint);
 }
 
+.year {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--faint);
+  transition: color 0.2s ease;
+}
+
+.links a:hover .year {
+  color: var(--accent);
+}
+
 .row-main {
   display: block;
-  flex: 1;
   min-width: 0;
-}
-
-.row-meta {
-  flex: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.since {
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--faint);
 }
 
 .row-title {
