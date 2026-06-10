@@ -370,6 +370,64 @@ h1 em {
   padding: 0.1rem 0.5rem;
 }
 
+/* --- Wide screens ----------------------------------------------------------- */
+
+@media (min-width: 1600px) {
+  .page {
+    max-width: min(94vw, 120rem);
+  }
+
+  h1 {
+    font-size: clamp(4.25rem, 3.4vw, 5.5rem);
+  }
+
+  .lede {
+    font-size: 1.15rem;
+    max-width: 42rem;
+  }
+
+  .category {
+    grid-template-columns: 4fr 9fr;
+  }
+
+  .category h2 {
+    font-size: 2.4rem;
+  }
+
+  .index-no {
+    font-size: 5rem;
+  }
+
+  .blurb {
+    font-size: 1.02rem;
+    max-width: 30rem;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4.5rem;
+  }
+
+  .links li:nth-child(2) {
+    border-top: none;
+  }
+}
+
+@media (min-width: 2560px) {
+  .page {
+    max-width: min(94vw, 170rem);
+  }
+
+  .links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .links li:nth-child(3) {
+    border-top: none;
+  }
+}
+
 /* --- Footer -------------------------------------------------------------------- */
 
 .footer {
