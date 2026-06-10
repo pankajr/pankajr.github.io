@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A curated selection of products and services personally recommended by Pankaj Rupani">
+  <meta name="description" content="A considered index of products and services Pankaj Rupani uses, loves, and recommends.">
   <meta name="keywords" content="recommendations, coffee, tech, travel, finance, smart home">
   <meta name="author" content="Pankaj Rupani">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://pankajr.net/links">
-  <!-- noop: pipeline demo -->
 
   <!-- Social Media Preview Meta Tags -->
   <meta property="og:title" content="Pankaj's Recommendations">
-  <meta property="og:description" content="A curated selection of products and services personally recommended by Pankaj">
+  <meta property="og:description" content="A considered index of products and services Pankaj Rupani uses, loves, and recommends.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pankajr.net/links">
   <meta property="og:image" content="https://pankajr.net/links/img/PR-logo.png">
 
   <!-- Twitter Card Tags -->
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Pankaj's Recommendations">
-  <meta name="twitter:description" content="A curated selection of products and services personally recommended by Pankaj">
+  <meta name="twitter:description" content="A considered index of products and services Pankaj Rupani uses, loves, and recommends.">
   <meta name="twitter:image" content="https://pankajr.net/links/img/PR-logo.png">
 
-  <!-- Preload key assets -->
-  <link rel="preload" href="img/PR-logo.png" as="image">
+  <!-- Apply saved theme before first paint to avoid a flash -->
+  <script>
+    (function () {
+      var theme = localStorage.getItem('theme') || 'auto';
+      if (theme === 'dark') document.documentElement.classList.add('dark-theme');
+      else if (theme === 'auto') document.documentElement.classList.add('auto-theme');
+    })();
+  </script>
 
   <!-- Fonts and Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..650;1,9..144,400..650&family=Hanken+Grotesk:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
   <!-- Favicon -->
@@ -39,186 +44,446 @@
   <title>Pankaj's Recommendations</title>
 </head>
 <body>
-    <div class="theme-switch-wrapper">
-      <div class="theme-switch">
+  <div class="page">
+    <header class="topbar reveal">
+      <span class="monogram" aria-hidden="true">P&middot;R</span>
+      <div class="theme-switch" role="group" aria-label="Color theme">
         <button id="lightBtn" class="theme-btn" aria-label="Light mode">Light</button>
         <button id="autoBtn" class="theme-btn active" aria-label="System preference">Auto</button>
         <button id="darkBtn" class="theme-btn" aria-label="Dark mode">Dark</button>
       </div>
-    </div>
-    <div style="text-align: center;">
-      <div class="logo-wrapper">
-        <img src="img/PR-logo.png" alt="Pankaj's Recommendations" class="site-logo">
-      </div>
-    </div>
-    <h1>Hey, I'm Pankaj <span class="wave">👋</span></h1>
-    <p class="description">
-      Engineer, coffee enthusiast, and tech tinkerer. Here's a curated selection of products and services I personally use and recommend.<br/>
-      <span class="subtle">Thoughtfully curated with <span class="emoji">❤️</span> for friends & family.</span>
-    </p>
+    </header>
 
-    <div class="categories">
-      <div class="category">
-        <h2><span class="emoji">🚗</span> Automotive</h2>
-        <div class="category-desc">The future of driving.</div>
-        <a class="link-card" href="https://www.pankajr.net/tesla" target="_blank">
-          <span class="link-title">Tesla <span class="star" title="Referral bonus">★</span></span><br><span class="link-desc">Get free FSD!</span>
-        </a>
-      </div>
-      <div class="category">
-        <h2><span class="emoji">☕</span> Coffee</h2>
-        <div class="category-desc">From beans to brewing equipment, these are my go-to coffee recommendations</div>
-        <a class="link-card" href="https://gracenotecoffee.com" target="_blank">
-          <span class="link-title">Gracenote Coffee</span><br><span class="link-desc">Exceptional Boston-based roasters</span>
-        </a>
-        <a class="link-card" href="https://broadsheetcoffee.com" target="_blank">
-          <span class="link-title">Broadsheet Coffee Roasters</span><br><span class="link-desc">Cambridge roaster — distinctive, freshly roasted coffees</span>
-        </a>
-        <a class="link-card" href="https://www.breville.com/en-us/product/bes920" target="_blank">
-          <span class="link-title">Breville - the Dual Boiler™</span><br><span class="link-desc">Professional-grade espresso at home</span>
-        </a>
-        <a class="link-card" href="https://fellowproducts.com/products/opus-coffee-grinder" target="_blank">
-          <span class="link-title">Fellow Opus Grinder</span><br><span class="link-desc">Perfect first espresso grinder</span>
-        </a>
-        <a class="link-card" href="https://fellowproducts.com/products/stagg-ekg-electric-pour-over-kettle" target="_blank">
-          <span class="link-title">Fellow Stagg EKG Kettle</span><br><span class="link-desc">The perfect pour-over kettle with precise temperature control</span>
-        </a>
-        <a class="link-card" href="https://www.hario-usa.com/products/v60-ceramic-coffee-dripper-02-classic" target="_blank">
-          <span class="link-title">Hario V60 Ceramic Dripper</span><br><span class="link-desc"><span class="coffee-method">Japanese</span> cone brewer for bright, complex flavors with spiral ridges</span>
-        </a>
-        <a class="link-card" href="https://www.hario-usa.com/products/v60-range-server" target="_blank">
-          <span class="link-title">Hario V60 Range Server</span><br><span class="link-desc">Perfect companion for the V60 dripper - elegant and functional</span>
-        </a>
-        <a class="link-card" href="https://chemexcoffeemaker.com/products/six-cup-classic-chemex" target="_blank">
-          <span class="link-title">Chemex Classic Six Cup</span><br><span class="link-desc"><span class="coffee-method">American</span> hourglass brewer with proprietary thick filters for oil-free coffee</span>
-        </a>
-        <a class="link-card" href="https://cometeer.com/discount/REF-15?redirect=/pages/referral-gift&referral_code=REF-15&referrer_id=8560575938859&referrer_name=Pankaj" target="_blank">
-          <span class="link-title">Cometeer Coffee <span class="star" title="Referral bonus">★</span></span><br><span class="link-desc">Flash-frozen coffee pods - get free coffee!</span>
-        </a>
-        <a class="link-card" href="https://amzn.to/3TQCTte" target="_blank">
-          <span class="link-title">Timemore Black Mirror Coffee Scale <span class="star" title="Affiliate link">★</span></span><br><span class="link-desc">Precise, fast, and reliable scale for pour-over and espresso</span>
-        </a>
-      </div>
-      <div class="category">
-        <h2><span class="emoji">💸</span> Money</h2>
-        <div class="category-desc">Tools and services to help you manage, save, and grow your money.</div>
-        <a class="link-card" href="https://www.pankajr.net/monarch" target="_blank">
-          <span class="link-title">Monarch Money <span class="star" title="Referral bonus">★</span></span><br><span class="link-desc">Get 6 months free!</span>
-        </a>
-        <a class="link-card" href="https://facet.com/invited?utm_content=4660&utm_source=member-referral&utm_term=Pankaj" target="_blank">
-          <span class="link-title">Facet Wealth <span class="star" title="Referral bonus">★</span></span><br><span class="link-desc">the flat-fee financial planning service that's been a game-changer for me. Get up to $1,000!</span>
-        </a>
-        <a class="link-card" href="https://www.pankajr.net/rakuten" target="_blank">
-          <span class="link-title">Rakuten <span class="star" title="Referral bonus">★</span></span><br><span class="link-desc">Earn $30!</span>
-        </a>
-        <a class="link-card" href="https://join.robinhood.com/sonalim2" target="_blank">
-          <span class="link-title">Robinhood <span class="star" title="Referral bonus">★</span></span><br><span class="link-desc">Get a free stock!</span>
-        </a>
-        <a class="link-card" href="https://americanexpress.com/en-us/referral/platinum-card?ref=PANKARyJQ7&xl=cp15" target="_blank">
-          <span class="link-title">Amex Platinum <span class="star" title="Referral bonus">★</span></span><br><span class="link-desc">Get 20k miles!</span>
-        </a>
-      </div>
-      <div class="category">
-        <h2><span class="emoji">🌏</span> Travel</h2>
-        <div class="category-desc">Travel essentials and services I use to stay connected and save money on the go.</div>
-        <a class="link-card" href="https://www.pankajr.net/airalo" target="_blank">
-          <span class="link-title">Airalo <span class="star" title="Referral bonus">★</span></span><br><span class="link-desc">eSIM for affordable global data - get $3 off!</span>
-        </a>
-        <a class="link-card" href="https://amzn.to/45esOfW" target="_blank">
-          <span class="link-title">GL.iNet Beryl AX <span class="star" title="Affiliate link">★</span></span><br><span class="link-desc">Solid Travel Router</span>
-        </a>
-        <a class="link-card" href="https://electronics.sony.com/audio/headphones/headband/p/wh1000xm4-b" target="_blank">
-          <span class="link-title">Sony WH-1000XM4</span><br><span class="link-desc">Excellent travel headphones (XM6 are the latest & even better)</span>
-        </a>
-      </div>
-      <div class="category">
-        <h2><span class="emoji">⚡</span> Productivity</h2>
-        <div class="category-desc">Tools and gear that power my daily workflow and maximize efficiency.</div>
-        <a class="link-card" href="https://www.keychron.com/collections/75-layout-keyboards/products/keychron-q10-pro-alice-layout-qmk-via-wireless-custom-mechanical-keyboard" target="_blank">
-          <span class="link-title">Keychron Q10 Pro Alice</span><br><span class="link-desc">Premium mechanical keyboard with ergonomic Alice layout</span>
-        </a>
-        <a class="link-card" href="https://www.logitech.com/en-us/shop/p/mx-master-3s" target="_blank">
-          <span class="link-title">Logitech MX Master 3S</span><br><span class="link-desc">The ultimate productivity mouse</span>
-        </a>
-        <a class="link-card" href="https://www.lg.com/us/monitors/lg-38wk95c-w-ultrawide-monitor" target="_blank">
-          <span class="link-title">LG 38WK95C-W</span><br><span class="link-desc">38" curved ultrawide monitor with USB-C and color calibration</span>
-        </a>
-        <a class="link-card" href="https://www.caldigit.com/thunderbolt-station-4/" target="_blank">
-          <span class="link-title">CalDigit TS4</span><br><span class="link-desc">Thunderbolt hub that handles everything</span>
-        </a>
-        <a class="link-card" href="https://hyperx.com/products/hyperx-duocast-usb-microphone" target="_blank">
-          <span class="link-title">HyperX DuoCast</span><br><span class="link-desc">Excellent USB microphone for calls & recordings</span>
-        </a>
-      </div>
-      <div class="category">
-        <h2><span class="emoji">🎬</span> Home Theatre & Audio</h2>
-        <div class="category-desc">Premium audio and video gear for the ultimate home entertainment experience.</div>
-        <a class="link-card" href="https://www.sonos.com" target="_blank">
-          <span class="link-title">Sonos</span><br><span class="link-desc">Best home audio</span>
-        </a>
-        <a class="link-card" href="https://north-america.beyerdynamic.com/p/dt-700-pro-x" target="_blank">
-          <span class="link-title">Beyerdynamic DT 700 Pro X</span><br><span class="link-desc">My favorite headphones</span>
-        </a>
-        <a class="link-card" href="https://www.martinlogan.com/en/product/electromotion-esl" target="_blank">
-          <span class="link-title">MartinLogan ElectroMotion ESL</span><br><span class="link-desc">Electrostatic speakers for audiophiles who want transparency</span>
-        </a>
-        <a class="link-card" href="https://www.project-audio.com/en/product/t1-evo/" target="_blank">
-          <span class="link-title">Project T1 Evo</span><br><span class="link-desc">Audiophile turntable with premium materials and no plastic parts</span>
-        </a>
-        <a class="link-card" href="https://www.lg.com/us/tvs/lg-oled65c1pub-oled-4k-tv" target="_blank">
-          <span class="link-title">LG OLED C1</span><br><span class="link-desc">Perfect blacks, incredible contrast, great for movies and gaming</span>
-        </a>
-        <a class="link-card" href="https://www.apple.com/apple-tv-4k/" target="_blank">
-          <span class="link-title">Apple TV 4K 128GB</span><br><span class="link-desc">Premium streaming with wired connection for reliability</span>
-        </a>
-      </div>
-      <div class="category">
-        <h2><span class="emoji">🏠</span> Smart Home</h2>
-        <div class="category-desc">My favorite smart home gadgets for lighting, security, and automation. Great for beginners and enthusiasts alike!</div>
-        <a class="link-card" href="https://www.philips-hue.com" target="_blank">
-          <span class="link-title">Philips Hue</span><br><span class="link-desc">Best smart lighting ecosystem</span>
-        </a>
-        <a class="link-card" href="https://www.casetawireless.com" target="_blank">
-          <span class="link-title">Lutron Caseta</span><br><span class="link-desc">Rock-solid smart switches</span>
-        </a>
-        <a class="link-card" href="https://www.aqara.com" target="_blank">
-          <span class="link-title">Aqara</span><br><span class="link-desc">Affordable sensors</span>
-        </a>
-        <a class="link-card" href="https://www.schlage.com/en/home/smart-locks/encode-plus.html" target="_blank">
-          <span class="link-title">Schlage Encode Plus</span><br><span class="link-desc">My Favorite Smart Lock</span>
-        </a>
-        <a class="link-card" href="https://amzn.to/453c8Hf" target="_blank">
-          <span class="link-title">Sonoff Zigbee USB Dongle <span class="star" title="Affiliate link">★</span></span><br><span class="link-desc">Affordable Zigbee dongle for smart home hubs</span>
-        </a>
-        <a class="link-card" href="https://amzn.to/453c8Hf" target="_blank">
-          <span class="link-title">Z-Wave USB Dongle <span class="star" title="Affiliate link">★</span></span><br><span class="link-desc">Easy Z-Wave integration for Home Assistant and other hubs</span>
-        </a>
-      </div>
-    </div>
-    <!-- Buy Me a Coffee Button at Bottom -->
-    <div style="display:flex;justify-content:center;margin-bottom:1em;">
-      <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="rupanipankl" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
-    </div>
+    <main>
+      <section class="hero">
+        <p class="overline reveal">Pankaj Rupani &mdash; A Personal Index</p>
+        <h1 class="reveal d1">Things I use, <em>love</em>, and would buy again.</h1>
+        <p class="lede reveal d2">
+          Engineer, coffee obsessive, habitual tinkerer. Every item below has earned its
+          place through daily use &mdash; curated for friends, family, and the curious.
+        </p>
+        <nav class="toc reveal d3" aria-label="Categories">
+          <a href="#coffee"><span class="toc-no">01</span>Coffee</a>
+          <a href="#productivity"><span class="toc-no">02</span>Productivity</a>
+          <a href="#audio"><span class="toc-no">03</span>Audio &amp; Theatre</a>
+          <a href="#smart-home"><span class="toc-no">04</span>Smart Home</a>
+          <a href="#travel"><span class="toc-no">05</span>Travel</a>
+          <a href="#money"><span class="toc-no">06</span>Money</a>
+          <a href="#automotive"><span class="toc-no">07</span>Automotive</a>
+        </nav>
+      </section>
+
+      <section class="category reveal d4" id="coffee">
+        <div class="category-head">
+          <span class="index-no">01</span>
+          <h2>Coffee</h2>
+          <p class="blurb">The daily ritual, taken seriously &mdash; roasters, brewers, and equipment that earns its counter space.</p>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="https://gracenotecoffee.com" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Gracenote Coffee</span>
+                <span class="row-desc">Boston roaster pulling some of the best espresso on the East Coast.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://broadsheetcoffee.com" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Broadsheet Coffee Roasters</span>
+                <span class="row-desc">Cambridge roaster with distinctive, impeccably fresh single origins.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.breville.com/en-us/product/bes920" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Breville Dual Boiler</span>
+                <span class="row-desc">Temperature-stable espresso at home &mdash; precise, consistent, and forgiving.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://fellowproducts.com/products/opus-coffee-grinder" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Fellow Opus Grinder</span>
+                <span class="row-desc">The right first grinder: capable, compact, and sensibly priced.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://fellowproducts.com/products/stagg-ekg-electric-pour-over-kettle" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Fellow Stagg EKG Kettle</span>
+                <span class="row-desc">Pinpoint temperature control and a spout that pours exactly where you aim.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.hario-usa.com/products/v60-ceramic-coffee-dripper-02-classic" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Hario V60 Ceramic Dripper</span>
+                <span class="row-desc">The classic cone brewer for bright, articulate cups.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.hario-usa.com/products/v60-range-server" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Hario V60 Range Server</span>
+                <span class="row-desc">The V60&rsquo;s natural companion &mdash; simple, handsome glassware.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://chemexcoffeemaker.com/products/six-cup-classic-chemex" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Chemex Classic, Six Cup</span>
+                <span class="row-desc">An hourglass icon whose thick filters yield an exceptionally clean cup.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://cometeer.com/discount/REF-15?redirect=/pages/referral-gift&referral_code=REF-15&referrer_id=8560575938859&referrer_name=Pankaj" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Cometeer <span class="tag">referral</span></span>
+                <span class="row-desc">Flash-frozen coffee capsules for travel and lazy mornings &mdash; the link earns you free coffee.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://bookoocoffee.com/products/bookoo-themis-ultra-coffee-scale" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">BooKoo Themis Ultra Scale</span>
+                <span class="row-desc">Fast, accurate weighing with live flow-rate readout &mdash; equally at home under espresso or pour-over.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="category" id="productivity">
+        <div class="category-head">
+          <span class="index-no">02</span>
+          <h2>Productivity</h2>
+          <p class="blurb">The desk setup that makes long days feel shorter.</p>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="https://www.keychron.com/collections/75-layout-keyboards/products/keychron-q10-pro-alice-layout-qmk-via-wireless-custom-mechanical-keyboard" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Keychron Q10 Pro</span>
+                <span class="row-desc">A wireless Alice-layout mechanical keyboard &mdash; ergonomic without a learning curve.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.logitech.com/en-us/shop/p/mx-master-3s" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Logitech MX Master 3S</span>
+                <span class="row-desc">Still the productivity mouse to beat.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.lg.com/us/monitors/lg-38wk95c-w-ultrawide-monitor" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">LG 38&Prime; UltraWide</span>
+                <span class="row-desc">One curved ultrawide that gracefully replaces two monitors.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.caldigit.com/thunderbolt-station-4/" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">CalDigit TS4</span>
+                <span class="row-desc">A single Thunderbolt cable for everything on the desk.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://hyperx.com/products/hyperx-duocast-usb-microphone" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">HyperX DuoCast</span>
+                <span class="row-desc">A USB microphone that flatters every call and recording.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="category" id="audio">
+        <div class="category-head">
+          <span class="index-no">03</span>
+          <h2>Audio &amp; Theatre</h2>
+          <p class="blurb">Sound and picture worth staying in for.</p>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="https://www.sonos.com" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Sonos</span>
+                <span class="row-desc">Multi-room audio that simply works.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://north-america.beyerdynamic.com/p/dt-700-pro-x" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Beyerdynamic DT 700 Pro X</span>
+                <span class="row-desc">Detailed, comfortable, and honest &mdash; my favorite closed-back headphones.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.martinlogan.com/en/product/electromotion-esl" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">MartinLogan ElectroMotion ESL</span>
+                <span class="row-desc">Electrostatic transparency at a price mortals can justify.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.project-audio.com/en/product/t1-evo/" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Pro-Ject T1 Evo</span>
+                <span class="row-desc">A sincere audiophile turntable with no plastic in the signal path.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.lg.com/us/tvs/lg-oled65c1pub-oled-4k-tv" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">LG C1 OLED</span>
+                <span class="row-desc">Perfect blacks and superb motion, for film and gaming alike.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.apple.com/apple-tv-4k/" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Apple TV 4K</span>
+                <span class="row-desc">The streaming box that stays out of your way &mdash; fast, wired, and free of clutter.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="category" id="smart-home">
+        <div class="category-head">
+          <span class="index-no">04</span>
+          <h2>Smart Home</h2>
+          <p class="blurb">Automation that recedes into the background &mdash; dependable and unobtrusive.</p>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="https://www.philips-hue.com" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Philips Hue</span>
+                <span class="row-desc">The smart-lighting ecosystem worth building on.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.casetawireless.com" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Lutron Cas&eacute;ta</span>
+                <span class="row-desc">Smart switches with unshakeable reliability.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.aqara.com" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Aqara</span>
+                <span class="row-desc">Inexpensive sensors that punch far above their price.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.schlage.com/en/home/smart-locks/encode-plus.html" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Schlage Encode Plus</span>
+                <span class="row-desc">The smart lock I trust on my own front door.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://amzn.to/453c8Hf" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Sonoff Zigbee USB Dongle <span class="tag">affiliate</span></span>
+                <span class="row-desc">The economical way to give Home Assistant a Zigbee radio.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="category" id="travel">
+        <div class="category-head">
+          <span class="index-no">05</span>
+          <h2>Travel</h2>
+          <p class="blurb">For staying connected and comfortable far from home.</p>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="https://www.pankajr.net/airalo" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Airalo <span class="tag">referral</span></span>
+                <span class="row-desc">Affordable eSIM data in nearly every country &mdash; the link takes $3 off.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://amzn.to/45esOfW" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">GL.iNet Beryl AX <span class="tag">affiliate</span></span>
+                <span class="row-desc">A pocket router that makes hotel Wi-Fi trustworthy.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://electronics.sony.com/audio/headphones/headband/p/wh1000xm4-b" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Sony WH-1000XM4</span>
+                <span class="row-desc">Long-haul noise cancellation; any recent generation is excellent.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="category" id="money">
+        <div class="category-head">
+          <span class="index-no">06</span>
+          <h2>Money</h2>
+          <p class="blurb">The tools I trust to manage, grow, and occasionally spend it.</p>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="https://www.pankajr.net/monarch" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Monarch Money <span class="tag">referral</span></span>
+                <span class="row-desc">The budgeting app that finally replaced Mint &mdash; six months free through the link.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://facet.com/invited?utm_content=4660&utm_source=member-referral&utm_term=Pankaj" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Facet <span class="tag">referral</span></span>
+                <span class="row-desc">Flat-fee financial planning that changed how I manage money &mdash; up to $1,000 through the link.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.pankajr.net/rakuten" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Rakuten <span class="tag">referral</span></span>
+                <span class="row-desc">Cash back on shopping you were doing anyway &mdash; $30 to start.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://join.robinhood.com/sonalim2" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Robinhood <span class="tag">referral</span></span>
+                <span class="row-desc">Commission-free investing; the link adds a free stock.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://americanexpress.com/en-us/referral/platinum-card?ref=PANKARyJQ7&xl=cp15" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Amex Platinum <span class="tag">referral</span></span>
+                <span class="row-desc">The travel card that earns its keep &mdash; 20,000 points through the link.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="category" id="automotive">
+        <div class="category-head">
+          <span class="index-no">07</span>
+          <h2>Automotive</h2>
+          <p class="blurb">One car, no caveats.</p>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="https://www.pankajr.net/tesla" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Tesla <span class="tag">referral</span></span>
+                <span class="row-desc">Still the best car I&rsquo;ve owned &mdash; the referral link adds perks at purchase.</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
     <footer class="footer">
-      Made with <span class="emoji">☕️</span> (and a dash of existential dread) by Pankaj H Rupani<br>
-      <span class="star" style="font-size:1.1em;vertical-align:middle;">★</span> Yep, I get a kickback if you click. Gotta fund this shit somehow.<br>
-      © 2025 • Hosted on <a href="https://pages.cloudflare.com/" target="_blank" class="footer-link">Cloudflare Pages</a>
-      because it sounded cool
-      <div class="visitor-info">
-        <div id="last-updated">Last updated: July 14, 2025</div>
-        <div id="visitor-location">Loading your location...</div>
+      <p class="footer-note">
+        Links marked <span class="tag">referral</span> or <span class="tag">affiliate</span> pay me a small
+        commission at no cost to you &mdash; it keeps the espresso flowing.
+      </p>
+      <div class="footer-actions">
+        <a class="pill-btn" href="mailto:hello@pankajr.net?subject=A%20recommendation%20for%20your%20index">Say hello</a>
+        <a class="pill-btn" href="https://www.buymeacoffee.com/rupanipankl" target="_blank" rel="noopener">Buy me a coffee</a>
       </div>
+      <p class="footer-meta">
+        Made with <span aria-hidden="true">&#9749;</span> and conviction by Pankaj Rupani<br>
+        Last updated June 10, 2026 &middot; &copy; 2026 &middot; Hosted on
+        <a href="https://pages.cloudflare.com/" target="_blank" rel="noopener" class="footer-link">Cloudflare Pages</a>
+      </p>
     </footer>
+  </div>
 
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
-      </svg>
-    </button>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </svg>
+  </button>
 
-    <script src="theme.js"></script>
-    <script src="easter.js"></script>
-    <script src="visitor-info.js"></script>
-    <script src="back-to-top.js"></script>
-  </body>
+  <script src="theme.js"></script>
+  <script src="easter.js"></script>
+  <script src="back-to-top.js"></script>
+</body>
 </html>
