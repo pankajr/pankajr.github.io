@@ -313,11 +313,18 @@ h1 em {
   min-width: 0;
 }
 
-.since {
+.row-meta {
   flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.since {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--faint);
 }
 
