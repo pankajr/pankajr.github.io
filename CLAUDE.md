@@ -10,7 +10,7 @@ To preview locally: `python3 -m http.server` and open http://localhost:8000.
 
 ## Structure
 
-- `index.html` — all content lives here. Recommendations are numbered `<section class="category">` blocks (01 Coffee … 07 Automotive), each with a `.category-head` (index number, `h2`, `.blurb`) and a `.links` list of anchor rows (`.row-title` + `.row-desc` + `.arrow`). The hero `.toc` nav links to each section by id; keep it in sync when adding/removing sections.
+- `index.html` — all content lives here. Recommendations are numbered `<section class="category">` blocks (01 Coffee … 08 Automotive), each with a `.category-head` (index number, `h2`, `.blurb`) and a `.links` list of anchor rows (`.row-title` + `.row-desc` + `.since` year + `.arrow`). When adding/removing/reordering sections, keep three things in sync: the hero `.toc` nav, the `.index-no` spans, and the JSON-LD `ItemList` in `<head>`.
 - `styles.css` — design system: warm paper-and-ink palette via CSS variables, Fraunces (display) + Hanken Grotesk (body) + Spline Sans Mono (labels/tags) from Google Fonts. Theming via classes on `<html>`: no class = light, `dark-theme` = dark, `auto-theme` = follow system preference (an inline `<head>` script applies the saved theme before first paint).
 - `theme.js` — light/auto/dark toggle (`#lightBtn`/`#autoBtn`/`#darkBtn`), persisted in `localStorage`.
 - `easter.js` — Konami-code / hidden-sparkle easter egg (confetti + sound).
@@ -22,5 +22,6 @@ To preview locally: `python3 -m http.server` and open http://localhost:8000.
 - Many referral links route through vanity redirects like `https://www.pankajr.net/tesla`; Amazon affiliate links use `amzn.to` short links.
 - All recommendation links open with `target="_blank" rel="noopener"`. Do not add `noreferrer` — referral programs may need the referrer.
 - The "Last updated" date and © year in `.footer-meta` are hardcoded — bump them when changing content.
+- Every link row carries a `<span class="since">YYYY</span>` noting when the item entered daily use (explained in the footer note). Ask the user for the year when adding an item.
 - Page-load reveal animations use `.reveal` with `.d1`–`.d4` delay classes; `prefers-reduced-motion` disables all motion.
 - Commit messages loosely follow conventional-commit style, e.g. `feat(coffee): add ...`.

@@ -38,6 +38,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..650;1,9..144,400..650&family=Hanken+Grotesk:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://pankajr.net/links",
+        "url": "https://pankajr.net/links",
+        "name": "Pankaj's Recommendations",
+        "description": "A considered index of products and services Pankaj Rupani uses, loves, and recommends.",
+        "author": { "@id": "https://pankajr.net/#pankaj" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://pankajr.net/#pankaj",
+        "name": "Pankaj Rupani",
+        "url": "https://pankajr.net"
+      },
+      {
+        "@type": "ItemList",
+        "name": "Pankaj's Recommendations",
+        "numberOfItems": 8,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Coffee", "url": "https://pankajr.net/links#coffee" },
+          { "@type": "ListItem", "position": 2, "name": "Productivity", "url": "https://pankajr.net/links#productivity" },
+          { "@type": "ListItem", "position": 3, "name": "Audio & Theatre", "url": "https://pankajr.net/links#audio" },
+          { "@type": "ListItem", "position": 4, "name": "Smart Home", "url": "https://pankajr.net/links#smart-home" },
+          { "@type": "ListItem", "position": 5, "name": "Homelab", "url": "https://pankajr.net/links#homelab" },
+          { "@type": "ListItem", "position": 6, "name": "Travel", "url": "https://pankajr.net/links#travel" },
+          { "@type": "ListItem", "position": 7, "name": "Money", "url": "https://pankajr.net/links#money" },
+          { "@type": "ListItem", "position": 8, "name": "Automotive", "url": "https://pankajr.net/links#automotive" }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" href="img/PR-logo.png" type="image/png">
   <link rel="apple-touch-icon" href="img/PR-logo.png">
@@ -67,9 +105,10 @@
           <a href="#productivity"><span class="toc-no">02</span>Productivity</a>
           <a href="#audio"><span class="toc-no">03</span>Audio &amp; Theatre</a>
           <a href="#smart-home"><span class="toc-no">04</span>Smart Home</a>
-          <a href="#travel"><span class="toc-no">05</span>Travel</a>
-          <a href="#money"><span class="toc-no">06</span>Money</a>
-          <a href="#automotive"><span class="toc-no">07</span>Automotive</a>
+          <a href="#homelab"><span class="toc-no">05</span>Homelab</a>
+          <a href="#travel"><span class="toc-no">06</span>Travel</a>
+          <a href="#money"><span class="toc-no">07</span>Money</a>
+          <a href="#automotive"><span class="toc-no">08</span>Automotive</a>
         </nav>
       </section>
 
@@ -86,6 +125,7 @@
                 <span class="row-title">Gracenote Coffee</span>
                 <span class="row-desc">Boston roaster pulling some of the best espresso on the East Coast.</span>
               </span>
+              <span class="since">2014</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -95,6 +135,7 @@
                 <span class="row-title">Broadsheet Coffee Roasters</span>
                 <span class="row-desc">Cambridge roaster with distinctive, impeccably fresh single origins.</span>
               </span>
+              <span class="since">2018</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -104,6 +145,7 @@
                 <span class="row-title">Breville Dual Boiler</span>
                 <span class="row-desc">Temperature-stable espresso at home &mdash; precise, consistent, and forgiving.</span>
               </span>
+              <span class="since">2021</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -113,6 +155,7 @@
                 <span class="row-title">Fellow Opus Grinder</span>
                 <span class="row-desc">The right first grinder: capable, compact, and sensibly priced.</span>
               </span>
+              <span class="since">2021</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -122,6 +165,7 @@
                 <span class="row-title">Mahlk&ouml;nig X64 SD</span>
                 <span class="row-desc">When you outgrow the Opus: single-dose grinding with commercial pedigree.</span>
               </span>
+              <span class="since">2026</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -131,6 +175,7 @@
                 <span class="row-title">Fellow Stagg EKG Kettle</span>
                 <span class="row-desc">Pinpoint temperature control and a spout that pours exactly where you aim.</span>
               </span>
+              <span class="since">2019</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -140,6 +185,7 @@
                 <span class="row-title">Hario V60 Ceramic Dripper</span>
                 <span class="row-desc">The classic cone brewer for bright, articulate cups.</span>
               </span>
+              <span class="since">2019</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -149,6 +195,7 @@
                 <span class="row-title">Hario V60 Range Server</span>
                 <span class="row-desc">The V60&rsquo;s natural companion &mdash; simple, handsome glassware.</span>
               </span>
+              <span class="since">2019</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -158,6 +205,7 @@
                 <span class="row-title">Chemex Classic, Six Cup</span>
                 <span class="row-desc">An hourglass icon whose thick filters yield an exceptionally clean cup.</span>
               </span>
+              <span class="since">2019</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -167,6 +215,7 @@
                 <span class="row-title">Cometeer <span class="tag">referral</span></span>
                 <span class="row-desc">Flash-frozen coffee capsules for travel and lazy mornings &mdash; the link earns you free coffee.</span>
               </span>
+              <span class="since">2022</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -176,6 +225,7 @@
                 <span class="row-title">BooKoo Themis Ultra Scale</span>
                 <span class="row-desc">Fast, accurate weighing with live flow-rate readout &mdash; equally at home under espresso or pour-over.</span>
               </span>
+              <span class="since">2025</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -195,6 +245,7 @@
                 <span class="row-title">Keychron Q10 Pro</span>
                 <span class="row-desc">A wireless Alice-layout mechanical keyboard &mdash; ergonomic without a learning curve.</span>
               </span>
+              <span class="since">2024</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -204,6 +255,7 @@
                 <span class="row-title">Logitech MX Master 3S</span>
                 <span class="row-desc">Still the productivity mouse to beat.</span>
               </span>
+              <span class="since">2021</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -213,6 +265,7 @@
                 <span class="row-title">LG 38&Prime; UltraWide</span>
                 <span class="row-desc">One curved ultrawide that gracefully replaces two monitors.</span>
               </span>
+              <span class="since">2019</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -222,6 +275,7 @@
                 <span class="row-title">CalDigit TS4</span>
                 <span class="row-desc">A single Thunderbolt cable for everything on the desk.</span>
               </span>
+              <span class="since">2022</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -231,6 +285,7 @@
                 <span class="row-title">HyperX DuoCast</span>
                 <span class="row-desc">A USB microphone that flatters every call and recording.</span>
               </span>
+              <span class="since">2023</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -250,6 +305,7 @@
                 <span class="row-title">Sonos</span>
                 <span class="row-desc">Multi-room audio that simply works.</span>
               </span>
+              <span class="since">2020</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -259,6 +315,7 @@
                 <span class="row-title">Beyerdynamic DT 700 Pro X</span>
                 <span class="row-desc">Detailed, comfortable, and honest &mdash; my favorite closed-back headphones.</span>
               </span>
+              <span class="since">2023</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -268,6 +325,7 @@
                 <span class="row-title">MartinLogan ElectroMotion ESL</span>
                 <span class="row-desc">Electrostatic transparency at a price mortals can justify.</span>
               </span>
+              <span class="since">2015</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -277,6 +335,7 @@
                 <span class="row-title">Pro-Ject T1 Evo</span>
                 <span class="row-desc">A sincere audiophile turntable with no plastic in the signal path.</span>
               </span>
+              <span class="since">2024</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -286,6 +345,7 @@
                 <span class="row-title">LG C1 OLED</span>
                 <span class="row-desc">Perfect blacks and superb motion, for film and gaming alike.</span>
               </span>
+              <span class="since">2022</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -295,6 +355,7 @@
                 <span class="row-title">Apple TV 4K</span>
                 <span class="row-desc">The streaming box that stays out of your way &mdash; fast, wired, and free of clutter.</span>
               </span>
+              <span class="since">2021</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -314,6 +375,7 @@
                 <span class="row-title">Philips Hue</span>
                 <span class="row-desc">The smart-lighting ecosystem worth building on.</span>
               </span>
+              <span class="since">2018</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -323,6 +385,7 @@
                 <span class="row-title">Lutron Cas&eacute;ta</span>
                 <span class="row-desc">Smart switches with unshakeable reliability.</span>
               </span>
+              <span class="since">2019</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -332,6 +395,7 @@
                 <span class="row-title">Aqara</span>
                 <span class="row-desc">Inexpensive sensors that punch far above their price.</span>
               </span>
+              <span class="since">2021</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -341,6 +405,7 @@
                 <span class="row-title">Schlage Encode Plus</span>
                 <span class="row-desc">The smart lock I trust on my own front door.</span>
               </span>
+              <span class="since">2023</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -350,6 +415,87 @@
                 <span class="row-title">Sonoff Zigbee USB Dongle <span class="tag">affiliate</span></span>
                 <span class="row-desc">The economical way to give Home Assistant a Zigbee radio.</span>
               </span>
+              <span class="since">2024</span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="category" id="homelab">
+        <div class="category-head">
+          <span class="index-no">05</span>
+          <h2>Homelab</h2>
+          <p class="blurb">Self-hosted and happily over-engineered &mdash; the stack in the basement that runs the house.</p>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="https://ui.com" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Ubiquiti UniFi</span>
+                <span class="row-desc">Prosumer networking that scales from a single access point to the whole house without drama.</span>
+              </span>
+              <span class="since">2020</span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.home-assistant.io" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Home Assistant</span>
+                <span class="row-desc">Open-source automation that ties the entire Smart Home section into one private, local brain.</span>
+              </span>
+              <span class="since">2020</span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.raspberrypi.com" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Raspberry Pi</span>
+                <span class="row-desc">The homelab&rsquo;s utility player &mdash; mine run Home Assistant, Pi-hole, and flight tracking.</span>
+              </span>
+              <span class="since">2014</span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://pi-hole.net" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Pi-hole</span>
+                <span class="row-desc">Network-wide ad blocking; the whole household browses lighter.</span>
+              </span>
+              <span class="since">2020</span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.plex.tv" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Plex</span>
+                <span class="row-desc">The home media server my family actually uses.</span>
+              </span>
+              <span class="since">2017</span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://frigate.video" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">Frigate</span>
+                <span class="row-desc">Open-source camera NVR with local, GPU-accelerated object detection &mdash; no cloud required.</span>
+              </span>
+              <span class="since">2024</span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/teslamate-org/teslamate" target="_blank" rel="noopener">
+              <span class="row-main">
+                <span class="row-title">TeslaMate</span>
+                <span class="row-desc">Self-hosted telemetry and charging analytics for the car in the final section.</span>
+              </span>
+              <span class="since">2024</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -358,7 +504,7 @@
 
       <section class="category" id="travel">
         <div class="category-head">
-          <span class="index-no">05</span>
+          <span class="index-no">06</span>
           <h2>Travel</h2>
           <p class="blurb">For staying connected and comfortable far from home.</p>
         </div>
@@ -369,6 +515,7 @@
                 <span class="row-title">Airalo <span class="tag">referral</span></span>
                 <span class="row-desc">Affordable eSIM data in nearly every country &mdash; the link takes $3 off.</span>
               </span>
+              <span class="since">2023</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -378,6 +525,7 @@
                 <span class="row-title">GL.iNet Beryl AX <span class="tag">affiliate</span></span>
                 <span class="row-desc">A pocket router that makes hotel Wi-Fi trustworthy.</span>
               </span>
+              <span class="since">2024</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -387,6 +535,7 @@
                 <span class="row-title">Sony WH-1000XM4</span>
                 <span class="row-desc">Long-haul noise cancellation; any recent generation is excellent.</span>
               </span>
+              <span class="since">2021</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -395,7 +544,7 @@
 
       <section class="category" id="money">
         <div class="category-head">
-          <span class="index-no">06</span>
+          <span class="index-no">07</span>
           <h2>Money</h2>
           <p class="blurb">The tools I trust to manage, grow, and occasionally spend it.</p>
         </div>
@@ -406,6 +555,7 @@
                 <span class="row-title">Monarch Money <span class="tag">referral</span></span>
                 <span class="row-desc">The budgeting app that finally replaced Mint &mdash; six months free through the link.</span>
               </span>
+              <span class="since">2024</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -415,6 +565,7 @@
                 <span class="row-title">Facet <span class="tag">referral</span></span>
                 <span class="row-desc">Flat-fee financial planning that changed how I manage money &mdash; up to $1,000 through the link.</span>
               </span>
+              <span class="since">2025</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -424,6 +575,7 @@
                 <span class="row-title">Rakuten <span class="tag">referral</span></span>
                 <span class="row-desc">Cash back on shopping you were doing anyway &mdash; $30 to start.</span>
               </span>
+              <span class="since">2019</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -433,6 +585,7 @@
                 <span class="row-title">Robinhood <span class="tag">referral</span></span>
                 <span class="row-desc">Commission-free investing; the link adds a free stock.</span>
               </span>
+              <span class="since">2013</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -442,6 +595,7 @@
                 <span class="row-title">Amex Platinum <span class="tag">referral</span></span>
                 <span class="row-desc">The travel card that earns its keep &mdash; 20,000 points through the link.</span>
               </span>
+              <span class="since">2022</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -450,7 +604,7 @@
 
       <section class="category" id="automotive">
         <div class="category-head">
-          <span class="index-no">07</span>
+          <span class="index-no">08</span>
           <h2>Automotive</h2>
           <p class="blurb">One car, no caveats.</p>
         </div>
@@ -461,6 +615,7 @@
                 <span class="row-title">Tesla <span class="tag">referral</span></span>
                 <span class="row-desc">Still the best car I&rsquo;ve owned &mdash; the referral link adds perks at purchase.</span>
               </span>
+              <span class="since">2020</span>
               <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
           </li>
@@ -472,6 +627,7 @@
       <p class="footer-note">
         Links marked <span class="tag">referral</span> or <span class="tag">affiliate</span> pay me a small
         commission at no cost to you &mdash; it keeps the espresso flowing.
+        The year beside each item marks when it entered daily service.
       </p>
       <div class="footer-actions">
         <a class="pill-btn" href="mailto:hello@pankajr.net?subject=A%20recommendation%20for%20your%20index">Say hello</a>

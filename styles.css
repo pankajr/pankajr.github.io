@@ -309,7 +309,16 @@ h1 em {
 
 .row-main {
   display: block;
+  flex: 1;
   min-width: 0;
+}
+
+.since {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--faint);
 }
 
 .row-title {
