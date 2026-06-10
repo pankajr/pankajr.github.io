@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..650;1,9..144,400..650&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+  }
+  body {
+    position: relative;
+    background-color: #f6f1e9;
+    background-image: radial-gradient(50rem 28rem at 88% -10%, rgba(179, 81, 19, 0.09), transparent 70%);
+    color: #211c13;
+    font-family: 'Fraunces', Georgia, serif;
+  }
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.5 0 0 0 0 0.47 0 0 0 0 0.42 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .frame {
+    position: absolute;
+    inset: 26px;
+    border: 1px solid rgba(33, 28, 19, 0.18);
+    padding: 58px 64px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .overline {
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 19px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #b35113;
+  }
+  h1 {
+    margin: 0;
+    font-optical-sizing: auto;
+    font-weight: 560;
+    font-size: 88px;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    max-width: 17ch;
+  }
+  h1 em {
+    font-style: italic;
+    color: #b35113;
+  }
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 19px;
+    letter-spacing: 0.08em;
+    color: #9a9181;
+  }
+  .meta .no {
+    color: #b35113;
+    opacity: 0.55;
+  }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="overline">Pankaj Rupani &mdash; A Personal Index</div>
+    <h1>Things I use, <em>love</em>, and would buy again.</h1>
+    <div class="meta">
+      <span>pankajr.net/links</span>
+      <span class="no">01 &mdash; 09</span>
+    </div>
+  </div>
+</body>
+</html>

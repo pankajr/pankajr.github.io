@@ -354,6 +354,27 @@ h1 em {
   transform: translate(3px, -3px);
 }
 
+/* Retired entries: same ledger, struck through and dimmed */
+.dead {
+  display: grid;
+  grid-template-columns: 4.6rem 1fr;
+  column-gap: 0.9rem;
+  align-items: baseline;
+  padding: 0.95rem 0.85rem;
+  margin: 0 -0.85rem;
+}
+
+.dead .row-title {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--faint);
+  text-decoration-thickness: 1px;
+}
+
+.dead .row-desc {
+  color: var(--faint);
+}
+
 .tag {
   display: inline-block;
   vertical-align: 0.12em;
